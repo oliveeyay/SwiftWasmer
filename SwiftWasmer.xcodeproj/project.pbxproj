@@ -3,91 +3,209 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE4A24142B2C60C7006894AD /* SwiftWasmerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A24132B2C60C7006894AD /* SwiftWasmerApp.swift */; };
-		CE4A24162B2C60C7006894AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A24152B2C60C7006894AD /* ContentView.swift */; };
-		CE4A24182B2C60C8006894AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4A24172B2C60C8006894AD /* Assets.xcassets */; };
-		CE4A241C2B2C60C8006894AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4A241B2B2C60C8006894AD /* Preview Assets.xcassets */; };
+		CE12817B2B2C6589001B11BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE12817A2B2C6589001B11BE /* Assets.xcassets */; };
+		CE12817D2B2C65C6001B11BE /* MacOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE12817C2B2C65C6001B11BE /* MacOSApp.swift */; };
+		CE1281872B2C6997001B11BE /* SharedModule in Frameworks */ = {isa = PBXBuildFile; productRef = CE1281862B2C6997001B11BE /* SharedModule */; };
+		CE12818F2B2C6A9C001B11BE /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE12818E2B2C6A9C001B11BE /* iOSApp.swift */; };
+		CE12819B2B2C6AC3001B11BE /* SharedModule in Frameworks */ = {isa = PBXBuildFile; productRef = CE12819A2B2C6AC3001B11BE /* SharedModule */; };
+		CE1281A32B2C6B56001B11BE /* iOSAppClipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1281A22B2C6B56001B11BE /* iOSAppClipApp.swift */; };
+		CE1281AF2B2C6B57001B11BE /* iOS App Clip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = CE1281A02B2C6B56001B11BE /* iOS App Clip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE1281B52B2C6B62001B11BE /* SharedModule in Frameworks */ = {isa = PBXBuildFile; productRef = CE1281B42B2C6B62001B11BE /* SharedModule */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CE1281AD2B2C6B57001B11BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE4A24082B2C60C7006894AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE12819F2B2C6B56001B11BE;
+			remoteInfo = "iOS App Clip";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE1281B32B2C6B57001B11BE /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+				CE1281AF2B2C6B57001B11BE /* iOS App Clip.app in Embed App Clips */,
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		CE4A24102B2C60C7006894AD /* SwiftWasmer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWasmer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE4A24132B2C60C7006894AD /* SwiftWasmerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWasmerApp.swift; sourceTree = "<group>"; };
-		CE4A24152B2C60C7006894AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CE4A24172B2C60C8006894AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE4A24192B2C60C8006894AD /* SwiftWasmer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftWasmer.entitlements; sourceTree = "<group>"; };
-		CE4A241B2B2C60C8006894AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE1281652B2C6390001B11BE /* SharedModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SharedModule; sourceTree = "<group>"; };
+		CE12816A2B2C6489001B11BE /* MacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1281752B2C648A001B11BE /* MacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacOS.entitlements; sourceTree = "<group>"; };
+		CE12817A2B2C6589001B11BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE12817C2B2C65C6001B11BE /* MacOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOSApp.swift; sourceTree = "<group>"; };
+		CE12817F2B2C6669001B11BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CE12818C2B2C6A9C001B11BE /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE12818E2B2C6A9C001B11BE /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
+		CE1281A02B2C6B56001B11BE /* iOS App Clip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS App Clip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1281A22B2C6B56001B11BE /* iOSAppClipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAppClipApp.swift; sourceTree = "<group>"; };
+		CE1281AB2B2C6B57001B11BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE1281AC2B2C6B57001B11BE /* iOS_App_Clip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS_App_Clip.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CE4A240D2B2C60C7006894AD /* Frameworks */ = {
+		CE1281672B2C6489001B11BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1281872B2C6997001B11BE /* SharedModule in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE1281892B2C6A9C001B11BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE12819B2B2C6AC3001B11BE /* SharedModule in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE12819D2B2C6B56001B11BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE1281B52B2C6B62001B11BE /* SharedModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE12816B2B2C6489001B11BE /* MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				CE12817F2B2C6669001B11BE /* Info.plist */,
+				CE12817C2B2C65C6001B11BE /* MacOSApp.swift */,
+				CE1281752B2C648A001B11BE /* MacOS.entitlements */,
+				CE12817A2B2C6589001B11BE /* Assets.xcassets */,
+			);
+			path = MacOS;
+			sourceTree = "<group>";
+		};
+		CE1281802B2C6676001B11BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE12818D2B2C6A9C001B11BE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CE12818E2B2C6A9C001B11BE /* iOSApp.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		CE1281A12B2C6B56001B11BE /* iOS App Clip */ = {
+			isa = PBXGroup;
+			children = (
+				CE1281A22B2C6B56001B11BE /* iOSAppClipApp.swift */,
+				CE1281AB2B2C6B57001B11BE /* Info.plist */,
+				CE1281AC2B2C6B57001B11BE /* iOS_App_Clip.entitlements */,
+			);
+			path = "iOS App Clip";
+			sourceTree = "<group>";
+		};
 		CE4A24072B2C60C7006894AD = {
 			isa = PBXGroup;
 			children = (
-				CE4A24122B2C60C7006894AD /* SharedModule */,
+				CE1281652B2C6390001B11BE /* SharedModule */,
+				CE12816B2B2C6489001B11BE /* MacOS */,
+				CE12818D2B2C6A9C001B11BE /* iOS */,
+				CE1281A12B2C6B56001B11BE /* iOS App Clip */,
 				CE4A24112B2C60C7006894AD /* Products */,
+				CE1281802B2C6676001B11BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		CE4A24112B2C60C7006894AD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE4A24102B2C60C7006894AD /* SwiftWasmer.app */,
+				CE12816A2B2C6489001B11BE /* MacOS.app */,
+				CE12818C2B2C6A9C001B11BE /* iOS.app */,
+				CE1281A02B2C6B56001B11BE /* iOS App Clip.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		CE4A24122B2C60C7006894AD /* SharedModule */ = {
-			isa = PBXGroup;
-			children = (
-				CE4A24132B2C60C7006894AD /* SwiftWasmerApp.swift */,
-				CE4A24152B2C60C7006894AD /* ContentView.swift */,
-				CE4A24172B2C60C8006894AD /* Assets.xcassets */,
-				CE4A24192B2C60C8006894AD /* SwiftWasmer.entitlements */,
-				CE4A241A2B2C60C8006894AD /* Preview Content */,
-			);
-			path = SharedModule;
-			sourceTree = "<group>";
-		};
-		CE4A241A2B2C60C8006894AD /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				CE4A241B2B2C60C8006894AD /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE4A240F2B2C60C7006894AD /* SwiftWasmer */ = {
+		CE1281692B2C6489001B11BE /* MacOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE4A241F2B2C60C8006894AD /* Build configuration list for PBXNativeTarget "SwiftWasmer" */;
+			buildConfigurationList = CE1281762B2C648A001B11BE /* Build configuration list for PBXNativeTarget "MacOS" */;
 			buildPhases = (
-				CE4A240C2B2C60C7006894AD /* Sources */,
-				CE4A240D2B2C60C7006894AD /* Frameworks */,
-				CE4A240E2B2C60C7006894AD /* Resources */,
+				CE1281662B2C6489001B11BE /* Sources */,
+				CE1281672B2C6489001B11BE /* Frameworks */,
+				CE1281682B2C6489001B11BE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SwiftWasmer;
-			productName = SwiftWasmer;
-			productReference = CE4A24102B2C60C7006894AD /* SwiftWasmer.app */;
+			name = MacOS;
+			packageProductDependencies = (
+				CE1281862B2C6997001B11BE /* SharedModule */,
+			);
+			productName = MacOS;
+			productReference = CE12816A2B2C6489001B11BE /* MacOS.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CE12818B2B2C6A9C001B11BE /* iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE1281972B2C6A9C001B11BE /* Build configuration list for PBXNativeTarget "iOS" */;
+			buildPhases = (
+				CE1281882B2C6A9C001B11BE /* Sources */,
+				CE1281892B2C6A9C001B11BE /* Frameworks */,
+				CE12818A2B2C6A9C001B11BE /* Resources */,
+				CE1281B32B2C6B57001B11BE /* Embed App Clips */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE1281AE2B2C6B57001B11BE /* PBXTargetDependency */,
+			);
+			name = iOS;
+			packageProductDependencies = (
+				CE12819A2B2C6AC3001B11BE /* SharedModule */,
+			);
+			productName = iOS;
+			productReference = CE12818C2B2C6A9C001B11BE /* iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE12819F2B2C6B56001B11BE /* iOS App Clip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE1281B02B2C6B57001B11BE /* Build configuration list for PBXNativeTarget "iOS App Clip" */;
+			buildPhases = (
+				CE12819C2B2C6B56001B11BE /* Sources */,
+				CE12819D2B2C6B56001B11BE /* Frameworks */,
+				CE12819E2B2C6B56001B11BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS App Clip";
+			packageProductDependencies = (
+				CE1281B42B2C6B62001B11BE /* SharedModule */,
+			);
+			productName = "iOS App Clip";
+			productReference = CE1281A02B2C6B56001B11BE /* iOS App Clip.app */;
+			productType = "com.apple.product-type.application.on-demand-install-capable";
 		};
 /* End PBXNativeTarget section */
 
@@ -99,7 +217,13 @@
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
-					CE4A240F2B2C60C7006894AD = {
+					CE1281692B2C6489001B11BE = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					CE12818B2B2C6A9C001B11BE = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					CE12819F2B2C6B56001B11BE = {
 						CreatedOnToolsVersion = 15.1;
 					};
 				};
@@ -113,40 +237,281 @@
 				Base,
 			);
 			mainGroup = CE4A24072B2C60C7006894AD;
+			packageReferences = (
+				CE1281852B2C6997001B11BE /* XCLocalSwiftPackageReference "SharedModule" */,
+			);
 			productRefGroup = CE4A24112B2C60C7006894AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE4A240F2B2C60C7006894AD /* SwiftWasmer */,
+				CE1281692B2C6489001B11BE /* MacOS */,
+				CE12818B2B2C6A9C001B11BE /* iOS */,
+				CE12819F2B2C6B56001B11BE /* iOS App Clip */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CE4A240E2B2C60C7006894AD /* Resources */ = {
+		CE1281682B2C6489001B11BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE4A241C2B2C60C8006894AD /* Preview Assets.xcassets in Resources */,
-				CE4A24182B2C60C8006894AD /* Assets.xcassets in Resources */,
+				CE12817B2B2C6589001B11BE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE12818A2B2C6A9C001B11BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE12819E2B2C6B56001B11BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CE4A240C2B2C60C7006894AD /* Sources */ = {
+		CE1281662B2C6489001B11BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE4A24162B2C60C7006894AD /* ContentView.swift in Sources */,
-				CE4A24142B2C60C7006894AD /* SwiftWasmerApp.swift in Sources */,
+				CE12817D2B2C65C6001B11BE /* MacOSApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE1281882B2C6A9C001B11BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE12818F2B2C6A9C001B11BE /* iOSApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE12819C2B2C6B56001B11BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE1281A32B2C6B56001B11BE /* iOSAppClipApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		CE1281AE2B2C6B57001B11BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE12819F2B2C6B56001B11BE /* iOS App Clip */;
+			targetProxy = CE1281AD2B2C6B57001B11BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		CE1281772B2C648A001B11BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MacOS/MacOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = MTC9F44K48;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacOS/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oliveeyay.SwiftWasmer.MacOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CE1281782B2C648A001B11BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MacOS/MacOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = MTC9F44K48;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacOS/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oliveeyay.SwiftWasmer.MacOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CE1281982B2C6A9C001B11BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = MTC9F44K48;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oliveeyay.SwiftWasmer.iOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE1281992B2C6A9C001B11BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = MTC9F44K48;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oliveeyay.SwiftWasmer.iOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE1281B12B2C6B57001B11BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "iOS App Clip/iOS_App_Clip.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = MTC9F44K48;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS App Clip/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = iOS;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oliveeyay.SwiftWasmer.iOS.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE1281B22B2C6B57001B11BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "iOS App Clip/iOS_App_Clip.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = MTC9F44K48;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS App Clip/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = iOS;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oliveeyay.SwiftWasmer.iOS.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		CE4A241D2B2C60C8006894AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -261,85 +626,36 @@
 			};
 			name = Release;
 		};
-		CE4A24202B2C60C8006894AD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = SharedModule/SwiftWasmer.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SharedModule/Preview Content\"";
-				DEVELOPMENT_TEAM = MTC9F44K48;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.oliveeyay.SwiftWasmer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		CE4A24212B2C60C8006894AD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = SharedModule/SwiftWasmer.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SharedModule/Preview Content\"";
-				DEVELOPMENT_TEAM = MTC9F44K48;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.oliveeyay.SwiftWasmer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CE1281762B2C648A001B11BE /* Build configuration list for PBXNativeTarget "MacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE1281772B2C648A001B11BE /* Debug */,
+				CE1281782B2C648A001B11BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE1281972B2C6A9C001B11BE /* Build configuration list for PBXNativeTarget "iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE1281982B2C6A9C001B11BE /* Debug */,
+				CE1281992B2C6A9C001B11BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE1281B02B2C6B57001B11BE /* Build configuration list for PBXNativeTarget "iOS App Clip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE1281B12B2C6B57001B11BE /* Debug */,
+				CE1281B22B2C6B57001B11BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CE4A240B2B2C60C7006894AD /* Build configuration list for PBXProject "SwiftWasmer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -349,16 +665,31 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE4A241F2B2C60C8006894AD /* Build configuration list for PBXNativeTarget "SwiftWasmer" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CE4A24202B2C60C8006894AD /* Debug */,
-				CE4A24212B2C60C8006894AD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		CE1281852B2C6997001B11BE /* XCLocalSwiftPackageReference "SharedModule" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = SharedModule;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE1281862B2C6997001B11BE /* SharedModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SharedModule;
+		};
+		CE12819A2B2C6AC3001B11BE /* SharedModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE1281852B2C6997001B11BE /* XCLocalSwiftPackageReference "SharedModule" */;
+			productName = SharedModule;
+		};
+		CE1281B42B2C6B62001B11BE /* SharedModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE1281852B2C6997001B11BE /* XCLocalSwiftPackageReference "SharedModule" */;
+			productName = SharedModule;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE4A24082B2C60C7006894AD /* Project object */;
 }

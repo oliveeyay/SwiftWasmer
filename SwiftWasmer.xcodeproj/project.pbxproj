@@ -105,6 +105,7 @@
 		CE1281C42B2C9488001B11BE /* misc.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = misc.xml; sourceTree = "<group>"; };
 		CE1281C62B2C9488001B11BE /* lib.rs */ = {isa = PBXFileReference; lastKnownFileType = text; path = lib.rs; sourceTree = "<group>"; };
 		CE1281C72B2C97D8001B11BE /* libRustWasmer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libRustWasmer.xcframework; sourceTree = "<group>"; };
+		CE192CC32B2CF61C007E6E60 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +221,7 @@
 		CE4A24072B2C60C7006894AD = {
 			isa = PBXGroup;
 			children = (
+				CE192CC32B2CF61C007E6E60 /* README.md */,
 				CE1281B62B2C947C001B11BE /* compileRustToXCFramework.sh */,
 				CE1281B72B2C9488001B11BE /* RustWasmer */,
 				CE1281652B2C6390001B11BE /* SharedModule */,

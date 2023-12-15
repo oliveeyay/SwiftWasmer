@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE12817B2B2C6589001B11BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE12817A2B2C6589001B11BE /* Assets.xcassets */; };
 		CE12817D2B2C65C6001B11BE /* MacOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE12817C2B2C65C6001B11BE /* MacOSApp.swift */; };
 		CE1281872B2C6997001B11BE /* SharedModule in Frameworks */ = {isa = PBXBuildFile; productRef = CE1281862B2C6997001B11BE /* SharedModule */; };
 		CE12818F2B2C6A9C001B11BE /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE12818E2B2C6A9C001B11BE /* iOSApp.swift */; };
@@ -15,12 +14,12 @@
 		CE1281A32B2C6B56001B11BE /* iOSAppClipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1281A22B2C6B56001B11BE /* iOSAppClipApp.swift */; };
 		CE1281AF2B2C6B57001B11BE /* iOS App Clip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = CE1281A02B2C6B56001B11BE /* iOS App Clip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CE1281B52B2C6B62001B11BE /* SharedModule in Frameworks */ = {isa = PBXBuildFile; productRef = CE1281B42B2C6B62001B11BE /* SharedModule */; };
-		CE1281C82B2C991E001B11BE /* libRustWasmer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1281C72B2C97D8001B11BE /* libRustWasmer.xcframework */; };
-		CE1281C92B2C991E001B11BE /* libRustWasmer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE1281C72B2C97D8001B11BE /* libRustWasmer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE1281CB2B2C9925001B11BE /* libRustWasmer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1281C72B2C97D8001B11BE /* libRustWasmer.xcframework */; };
 		CE1281CC2B2C9925001B11BE /* libRustWasmer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE1281C72B2C97D8001B11BE /* libRustWasmer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE1281CE2B2C9929001B11BE /* libRustWasmer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1281C72B2C97D8001B11BE /* libRustWasmer.xcframework */; };
 		CE1281CF2B2C9929001B11BE /* libRustWasmer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE1281C72B2C97D8001B11BE /* libRustWasmer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE1282012B2CAC93001B11BE /* libRustWasmer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1281C72B2C97D8001B11BE /* libRustWasmer.xcframework */; };
+		CE1282022B2CAC93001B11BE /* libRustWasmer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE1281C72B2C97D8001B11BE /* libRustWasmer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,17 +44,6 @@
 			name = "Embed App Clips";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE1281CA2B2C991E001B11BE /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				CE1281C92B2C991E001B11BE /* libRustWasmer.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CE1281CD2B2C9925001B11BE /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,13 +66,23 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE1282032B2CAC93001B11BE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE1282022B2CAC93001B11BE /* libRustWasmer.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CE1281652B2C6390001B11BE /* SharedModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SharedModule; sourceTree = "<group>"; };
 		CE12816A2B2C6489001B11BE /* MacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1281752B2C648A001B11BE /* MacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacOS.entitlements; sourceTree = "<group>"; };
-		CE12817A2B2C6589001B11BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE12817C2B2C65C6001B11BE /* MacOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOSApp.swift; sourceTree = "<group>"; };
 		CE12817F2B2C6669001B11BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CE12818C2B2C6A9C001B11BE /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1281C82B2C991E001B11BE /* libRustWasmer.xcframework in Frameworks */,
+				CE1282012B2CAC93001B11BE /* libRustWasmer.xcframework in Frameworks */,
 				CE1281872B2C6997001B11BE /* SharedModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,7 +144,6 @@
 				CE12817F2B2C6669001B11BE /* Info.plist */,
 				CE12817C2B2C65C6001B11BE /* MacOSApp.swift */,
 				CE1281752B2C648A001B11BE /* MacOS.entitlements */,
-				CE12817A2B2C6589001B11BE /* Assets.xcassets */,
 			);
 			path = MacOS;
 			sourceTree = "<group>";
@@ -254,7 +251,7 @@
 				CE1281662B2C6489001B11BE /* Sources */,
 				CE1281672B2C6489001B11BE /* Frameworks */,
 				CE1281682B2C6489001B11BE /* Resources */,
-				CE1281CA2B2C991E001B11BE /* Embed Frameworks */,
+				CE1282032B2CAC93001B11BE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -361,7 +358,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE12817B2B2C6589001B11BE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,10 +416,12 @@
 		CE1281772B2C648A001B11BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MacOS/MacOS.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -441,8 +439,10 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oliveeyay.SwiftWasmer.MacOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -452,10 +452,12 @@
 		CE1281782B2C648A001B11BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MacOS/MacOS.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -473,8 +475,11 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oliveeyay.SwiftWasmer.MacOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

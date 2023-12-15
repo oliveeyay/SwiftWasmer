@@ -10,9 +10,12 @@ import SharedModule
 
 @main
 struct SwiftWasmerApp: App {
+    @StateObject private var swiftWasmerViewModel = SwiftWasmerViewModel()
+    
     var body: some Scene {
         WindowGroup {
             SwiftWasmerView()
+                .environmentObject(swiftWasmerViewModel)
         }
     }
 }

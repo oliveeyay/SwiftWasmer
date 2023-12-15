@@ -15,6 +15,12 @@
 		CE1281A32B2C6B56001B11BE /* iOSAppClipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1281A22B2C6B56001B11BE /* iOSAppClipApp.swift */; };
 		CE1281AF2B2C6B57001B11BE /* iOS App Clip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = CE1281A02B2C6B56001B11BE /* iOS App Clip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CE1281B52B2C6B62001B11BE /* SharedModule in Frameworks */ = {isa = PBXBuildFile; productRef = CE1281B42B2C6B62001B11BE /* SharedModule */; };
+		CE1281C82B2C991E001B11BE /* libRustWasmer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1281C72B2C97D8001B11BE /* libRustWasmer.xcframework */; };
+		CE1281C92B2C991E001B11BE /* libRustWasmer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE1281C72B2C97D8001B11BE /* libRustWasmer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE1281CB2B2C9925001B11BE /* libRustWasmer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1281C72B2C97D8001B11BE /* libRustWasmer.xcframework */; };
+		CE1281CC2B2C9925001B11BE /* libRustWasmer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE1281C72B2C97D8001B11BE /* libRustWasmer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE1281CE2B2C9929001B11BE /* libRustWasmer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1281C72B2C97D8001B11BE /* libRustWasmer.xcframework */; };
+		CE1281CF2B2C9929001B11BE /* libRustWasmer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE1281C72B2C97D8001B11BE /* libRustWasmer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +45,39 @@
 			name = "Embed App Clips";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE1281CA2B2C991E001B11BE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE1281C92B2C991E001B11BE /* libRustWasmer.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE1281CD2B2C9925001B11BE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE1281CC2B2C9925001B11BE /* libRustWasmer.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE1281D02B2C992A001B11BE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE1281CF2B2C9929001B11BE /* libRustWasmer.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +93,20 @@
 		CE1281A22B2C6B56001B11BE /* iOSAppClipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAppClipApp.swift; sourceTree = "<group>"; };
 		CE1281AB2B2C6B57001B11BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE1281AC2B2C6B57001B11BE /* iOS_App_Clip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS_App_Clip.entitlements; sourceTree = "<group>"; };
+		CE1281B62B2C947C001B11BE /* compileRustToXCFramework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = compileRustToXCFramework.sh; sourceTree = "<group>"; };
+		CE1281B82B2C9488001B11BE /* Cargo.toml */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cargo.toml; sourceTree = "<group>"; };
+		CE1281B92B2C9488001B11BE /* Cargo.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cargo.lock; sourceTree = "<group>"; };
+		CE1281BA2B2C9488001B11BE /* build.rs */ = {isa = PBXFileReference; lastKnownFileType = text; path = build.rs; sourceTree = "<group>"; };
+		CE1281BC2B2C9488001B11BE /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		CE1281BD2B2C9488001B11BE /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		CE1281BF2B2C9488001B11BE /* vcs.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = vcs.xml; sourceTree = "<group>"; };
+		CE1281C02B2C9488001B11BE /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		CE1281C12B2C9488001B11BE /* workspace.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = workspace.xml; sourceTree = "<group>"; };
+		CE1281C22B2C9488001B11BE /* modules.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = modules.xml; sourceTree = "<group>"; };
+		CE1281C32B2C9488001B11BE /* RustWasmer.iml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = RustWasmer.iml; sourceTree = "<group>"; };
+		CE1281C42B2C9488001B11BE /* misc.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = misc.xml; sourceTree = "<group>"; };
+		CE1281C62B2C9488001B11BE /* lib.rs */ = {isa = PBXFileReference; lastKnownFileType = text; path = lib.rs; sourceTree = "<group>"; };
+		CE1281C72B2C97D8001B11BE /* libRustWasmer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libRustWasmer.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1281C82B2C991E001B11BE /* libRustWasmer.xcframework in Frameworks */,
 				CE1281872B2C6997001B11BE /* SharedModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1281CB2B2C9925001B11BE /* libRustWasmer.xcframework in Frameworks */,
 				CE12819B2B2C6AC3001B11BE /* SharedModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1281CE2B2C9929001B11BE /* libRustWasmer.xcframework in Frameworks */,
 				CE1281B52B2C6B62001B11BE /* SharedModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +154,7 @@
 		CE1281802B2C6676001B11BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE1281C72B2C97D8001B11BE /* libRustWasmer.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,9 +177,54 @@
 			path = "iOS App Clip";
 			sourceTree = "<group>";
 		};
+		CE1281B72B2C9488001B11BE /* RustWasmer */ = {
+			isa = PBXGroup;
+			children = (
+				CE1281B82B2C9488001B11BE /* Cargo.toml */,
+				CE1281B92B2C9488001B11BE /* Cargo.lock */,
+				CE1281BA2B2C9488001B11BE /* build.rs */,
+				CE1281BB2B2C9488001B11BE /* headers */,
+				CE1281BE2B2C9488001B11BE /* .idea */,
+				CE1281C52B2C9488001B11BE /* src */,
+			);
+			path = RustWasmer;
+			sourceTree = "<group>";
+		};
+		CE1281BB2B2C9488001B11BE /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				CE1281BC2B2C9488001B11BE /* BridgingHeader.h */,
+				CE1281BD2B2C9488001B11BE /* module.modulemap */,
+			);
+			path = headers;
+			sourceTree = "<group>";
+		};
+		CE1281BE2B2C9488001B11BE /* .idea */ = {
+			isa = PBXGroup;
+			children = (
+				CE1281BF2B2C9488001B11BE /* vcs.xml */,
+				CE1281C02B2C9488001B11BE /* .gitignore */,
+				CE1281C12B2C9488001B11BE /* workspace.xml */,
+				CE1281C22B2C9488001B11BE /* modules.xml */,
+				CE1281C32B2C9488001B11BE /* RustWasmer.iml */,
+				CE1281C42B2C9488001B11BE /* misc.xml */,
+			);
+			path = .idea;
+			sourceTree = "<group>";
+		};
+		CE1281C52B2C9488001B11BE /* src */ = {
+			isa = PBXGroup;
+			children = (
+				CE1281C62B2C9488001B11BE /* lib.rs */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		CE4A24072B2C60C7006894AD = {
 			isa = PBXGroup;
 			children = (
+				CE1281B62B2C947C001B11BE /* compileRustToXCFramework.sh */,
+				CE1281B72B2C9488001B11BE /* RustWasmer */,
 				CE1281652B2C6390001B11BE /* SharedModule */,
 				CE12816B2B2C6489001B11BE /* MacOS */,
 				CE12818D2B2C6A9C001B11BE /* iOS */,
@@ -152,6 +254,7 @@
 				CE1281662B2C6489001B11BE /* Sources */,
 				CE1281672B2C6489001B11BE /* Frameworks */,
 				CE1281682B2C6489001B11BE /* Resources */,
+				CE1281CA2B2C991E001B11BE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,6 +276,7 @@
 				CE1281892B2C6A9C001B11BE /* Frameworks */,
 				CE12818A2B2C6A9C001B11BE /* Resources */,
 				CE1281B32B2C6B57001B11BE /* Embed App Clips */,
+				CE1281CD2B2C9925001B11BE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,6 +298,7 @@
 				CE12819C2B2C6B56001B11BE /* Sources */,
 				CE12819D2B2C6B56001B11BE /* Frameworks */,
 				CE12819E2B2C6B56001B11BE /* Resources */,
+				CE1281D02B2C992A001B11BE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

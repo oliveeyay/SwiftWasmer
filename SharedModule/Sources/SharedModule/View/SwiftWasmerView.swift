@@ -17,7 +17,7 @@ public struct SwiftWasmerView: View {
             Button(action: {
                 swiftWasmerViewModel.swiftCallToRustWasmer()
             }) {
-                Text("Wasm me")
+                Text("Launch Wasm Program")
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(Color.blue)

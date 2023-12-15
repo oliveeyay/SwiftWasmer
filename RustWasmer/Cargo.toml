@@ -13,3 +13,6 @@ swift-bridge-build = "0.1.52"
 
 [dependencies]
 swift-bridge = "0.1.52"
+wasmer = { version = "4.2.4" , default-features = false, features = ["sys", "cranelift"]}
+wasmer-compiler-cranelift = "4.2.4"
+wat = "1.0.82"

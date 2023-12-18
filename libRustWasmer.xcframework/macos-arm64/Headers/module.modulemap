@@ -1,4 +1,0 @@
-module Rust {
-    umbrella header "BridgingHeader.h"
-    export *
-}

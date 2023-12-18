@@ -1,6 +1,6 @@
 //
 //  SwiftWasmerViewModel.swift
-//  
+//
 //
 //  Created by Olivier Goutay on 15/12/2023.
 //
@@ -11,7 +11,7 @@ import Rust
 public class SwiftWasmerViewModel: ObservableObject {
     
     public init() {}
-        
+    
     func swiftCallToRustWasmerWatSum() {
         let startTime = CFAbsoluteTimeGetCurrent()
         let swiftWasmerResult = call_sum_wat()
@@ -36,7 +36,7 @@ public class SwiftWasmerViewModel: ObservableObject {
         }
     }
     
-    func swiftCallToRustWasmerBinaryMemory() {
+    func swiftCallToRustWasmerBinaryMemoryFill() {
         let startTime = CFAbsoluteTimeGetCurrent()
         
         // Get the wasm binary data
@@ -45,10 +45,18 @@ public class SwiftWasmerViewModel: ObservableObject {
         print("\(wasmData.count)")
         
         wasmData.withUnsafeBytes { (wasmPointer: UnsafeRawBufferPointer) in
-            let swiftWasmerResult = call_memory_binary(wasmPointer.assumingMemoryBound(to: UInt8.self))
+            let swiftWasmerResult = call_memory_fill_binary(wasmPointer.assumingMemoryBound(to: UInt8.self))
             print("SwiftWasmer result: \(swiftWasmerResult)")
             let endTime = CFAbsoluteTimeGetCurrent()
             print("SwiftWasmer time: \(endTime - startTime)")
         }
+    }
+    
+    func swiftCallToRustWasmerBinaryMemoryTest() {
+        let startTime = CFAbsoluteTimeGetCurrent()
+        let swiftWasmerResult = call_memory_test_wat()
+        print("SwiftWasmer result: \(swiftWasmerResult)")
+        let endTime = CFAbsoluteTimeGetCurrent()
+        print("SwiftWasmer time: \(endTime - startTime)")
     }
 }

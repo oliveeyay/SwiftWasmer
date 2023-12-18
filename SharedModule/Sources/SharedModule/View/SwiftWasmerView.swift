@@ -41,7 +41,20 @@ public struct SwiftWasmerView: View {
             .padding()
             
             Button(action: {
-                swiftWasmerViewModel.swiftCallToRustWasmerBinaryMemory()
+                swiftWasmerViewModel.swiftCallToRustWasmerBinaryMemoryFill()
+            }) {
+                Text("Launch Wasm Memory Program (binary)")
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundStyle(Color.white)
+                    .fontWeight(.bold)
+                    .cornerRadius(40)
+            }
+            .padding()
+            
+            Button(action: {
+                swiftWasmerViewModel.swiftCallToRustWasmerBinaryMemoryTest()
             }) {
                 Text("Launch Wasm Memory Program (binary)")
                     .frame(maxWidth: .infinity)

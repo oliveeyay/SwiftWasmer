@@ -3,6 +3,7 @@
 #include <stdbool.h>
 int32_t __swift_bridge__$call_sum_wat(void);
 bool __swift_bridge__$call_sum_binary(struct __private__FfiSlice wasm_program);
-bool __swift_bridge__$call_memory_binary(struct __private__FfiSlice wasm_program);
+bool __swift_bridge__$call_memory_fill_binary(struct __private__FfiSlice wasm_program);
+bool __swift_bridge__$call_memory_test_wat(void);
 
 

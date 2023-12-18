@@ -5,6 +5,7 @@ use wasmer_compiler_cranelift::Cranelift;
 mod ffi {
     extern "Rust" {
         pub fn call_wasmer() -> i32;
+        pub fn call(wasm_program: &[u8]) -> bool;
     }
 }
 
@@ -61,4 +62,20 @@ pub fn call_wasmer() -> i32 {
     assert_eq!(results.to_vec(), vec![Value::I32(3)]);
 
     return (*results)[0].i32().unwrap()
+}
+
+// Call the sum program from a wasm program in binary format
+pub fn call(wasm_program: &[u8]) -> bool {
+    let wasm_bytes = wasm_program.to_vec();
+    let compiler_config = Cranelift::default();
+    let engine = EngineBuilder::new(compiler_config);
+    let mut store = Store::new(engine);
+    let module = Module::new(&store, wasm_bytes).unwrap();
+    let import_object = imports! {};
+    let instance = Instance::new(&mut store, &module, &import_object).unwrap();
+    let sum = instance.exports.get_function("addTwo").unwrap();
+    let results = sum.call(&mut store, &[Value::I32(1), Value::I32(2)]).unwrap();
+    println!("Results: {:?}", results);
+    assert_eq!(results.to_vec(), vec![Value::I32(3)]);
+    return results.to_vec() == vec![Value::I32(3)]
 }

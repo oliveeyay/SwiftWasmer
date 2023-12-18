@@ -1,6 +1,6 @@
 //
 //  SwiftWasmerView.swift
-//  
+//
 //
 //  Created by Olivier Goutay on 15/12/2023.
 //
@@ -15,9 +15,22 @@ public struct SwiftWasmerView: View {
     public var body: some View {
         VStack {
             Button(action: {
-                swiftWasmerViewModel.swiftCallToRustWasmer()
+                swiftWasmerViewModel.swiftCallToRustWasmerWat()
             }) {
-                Text("Launch Wasm Program")
+                Text("Launch Wasm Program (wat)")
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundStyle(Color.white)
+                    .fontWeight(.bold)
+                    .cornerRadius(40)
+            }
+            .padding()
+            
+            Button(action: {
+                swiftWasmerViewModel.swiftCallToRustWasmerBinary()
+            }) {
+                Text("Launch Wasm Program (binary)")
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(Color.blue)

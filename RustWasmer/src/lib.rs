@@ -4,12 +4,13 @@ use wasmer_compiler_cranelift::Cranelift;
 #[swift_bridge::bridge]
 mod ffi {
     extern "Rust" {
-        pub fn call_wasmer() -> i32;
-        pub fn call(wasm_program: &[u8]) -> bool;
+        pub fn call_sum_wat() -> i32;
+        pub fn call_sum_binary(wasm_program: &[u8]) -> bool;
+        pub fn call_memory_binary(wasm_program: &[u8]) -> bool;
     }
 }
 
-pub fn call_wasmer() -> i32 {
+pub fn call_sum_wat() -> i32 {
     let wasm_bytes = wat::parse_str(
         r#"
 (module
@@ -65,7 +66,7 @@ pub fn call_wasmer() -> i32 {
 }
 
 // Call the sum program from a wasm program in binary format
-pub fn call(wasm_program: &[u8]) -> bool {
+pub fn call_sum_binary(wasm_program: &[u8]) -> bool {
     let wasm_bytes = wasm_program.to_vec();
     let compiler_config = Cranelift::default();
     let engine = EngineBuilder::new(compiler_config);
@@ -78,4 +79,18 @@ pub fn call(wasm_program: &[u8]) -> bool {
     println!("Results: {:?}", results);
     assert_eq!(results.to_vec(), vec![Value::I32(3)]);
     return results.to_vec() == vec![Value::I32(3)]
+}
+
+pub fn call_memory_binary(wasm_program: &[u8]) -> bool {
+    let wasm_bytes = wasm_program.to_vec();
+    let compiler_config = Cranelift::default();
+    let engine = EngineBuilder::new(compiler_config);
+    let mut store = Store::new(engine);
+    let module = Module::new(&store, wasm_bytes).unwrap();
+    let import_object = imports! {};
+    let instance = Instance::new(&mut store, &module, &import_object).unwrap();
+    let fill = instance.exports.get_function("fill").unwrap();
+    let results = fill.call(&mut store, &[Value::I32(1), Value::I32(1), Value::I32(1)]).unwrap();
+    println!("Results: {:?}", results);
+    return true
 }

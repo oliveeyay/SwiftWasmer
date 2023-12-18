@@ -15,9 +15,9 @@ public struct SwiftWasmerView: View {
     public var body: some View {
         VStack {
             Button(action: {
-                swiftWasmerViewModel.swiftCallToRustWasmerWat()
+                swiftWasmerViewModel.swiftCallToRustWasmerWatSum()
             }) {
-                Text("Launch Wasm Program (wat)")
+                Text("Launch Wasm Sum Program (wat)")
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(Color.blue)
@@ -28,9 +28,9 @@ public struct SwiftWasmerView: View {
             .padding()
             
             Button(action: {
-                swiftWasmerViewModel.swiftCallToRustWasmerBinary()
+                swiftWasmerViewModel.swiftCallToRustWasmerBinarySum()
             }) {
-                Text("Launch Wasm Program (binary)")
+                Text("Launch Wasm Sum Program (binary)")
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(Color.blue)
@@ -40,7 +40,20 @@ public struct SwiftWasmerView: View {
             }
             .padding()
             
-            Text("Test a Rust Wasmer call from Swift by clicking on the button")
+            Button(action: {
+                swiftWasmerViewModel.swiftCallToRustWasmerBinaryMemory()
+            }) {
+                Text("Launch Wasm Memory Program (binary)")
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundStyle(Color.white)
+                    .fontWeight(.bold)
+                    .cornerRadius(40)
+            }
+            .padding()
+            
+            Text("Test a Rust Wasmer call from Swift by clicking one of the button")
                 .padding()
         }
         .padding()

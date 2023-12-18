@@ -21,6 +21,7 @@ let package = Package(
             name: "SharedModule",
             resources: [
                 .process("Resources/sum.wasm"),
+                .process("Resources/memory.wasm"),
             ]
         ),
     ]

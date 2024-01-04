@@ -25,6 +25,7 @@ public struct SwiftWasmerView: View {
                     .fontWeight(.bold)
                     .cornerRadius(40)
             }
+            .buttonStyle(.borderless)
             .padding()
             
             Button(action: {
@@ -38,6 +39,7 @@ public struct SwiftWasmerView: View {
                     .fontWeight(.bold)
                     .cornerRadius(40)
             }
+            .buttonStyle(.borderless)
             .padding()
             
             Button(action: {
@@ -51,6 +53,7 @@ public struct SwiftWasmerView: View {
                     .fontWeight(.bold)
                     .cornerRadius(40)
             }
+            .buttonStyle(.borderless)
             .padding()
             
             Text("Test a Rust Wasmer call from Swift by clicking one of the button")

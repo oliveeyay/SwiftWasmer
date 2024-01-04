@@ -107,6 +107,9 @@
 		CE1281C72B2C97D8001B11BE /* libRustWasmer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libRustWasmer.xcframework; sourceTree = "<group>"; };
 		CE192CC32B2CF61C007E6E60 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CE9F295B2B30A86E001FCD23 /* iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS.entitlements; sourceTree = "<group>"; };
+		CEC4BD492B4718720009E115 /* memory_static_limited.rs */ = {isa = PBXFileReference; lastKnownFileType = text; path = memory_static_limited.rs; sourceTree = "<group>"; };
+		CEC4BD4A2B4718720009E115 /* memory_default.rs */ = {isa = PBXFileReference; lastKnownFileType = text; path = memory_default.rs; sourceTree = "<group>"; };
+		CEC4BD4B2B4718720009E115 /* memory_dynamic.rs */ = {isa = PBXFileReference; lastKnownFileType = text; path = memory_dynamic.rs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +218,9 @@
 		CE1281C52B2C9488001B11BE /* src */ = {
 			isa = PBXGroup;
 			children = (
+				CEC4BD4A2B4718720009E115 /* memory_default.rs */,
+				CEC4BD4B2B4718720009E115 /* memory_dynamic.rs */,
+				CEC4BD492B4718720009E115 /* memory_static_limited.rs */,
 				CE1281C62B2C9488001B11BE /* lib.rs */,
 			);
 			path = src;

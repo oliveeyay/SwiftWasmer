@@ -12,49 +12,25 @@ public class SwiftWasmerViewModel: ObservableObject {
     
     public init() {}
     
-    func swiftCallToRustWasmerWatSum() {
+    func swiftCallToRustWasmerBinaryMemoryDefault() {
         let startTime = CFAbsoluteTimeGetCurrent()
-        let swiftWasmerResult = call_sum_wat()
+        let swiftWasmerResult = call_memory_with_default_tunables()
         print("SwiftWasmer result: \(swiftWasmerResult)")
         let endTime = CFAbsoluteTimeGetCurrent()
         print("SwiftWasmer time: \(endTime - startTime)")
     }
     
-    func swiftCallToRustWasmerBinarySum() {
+    func swiftCallToRustWasmerBinaryMemoryStaticLimited() {
         let startTime = CFAbsoluteTimeGetCurrent()
-        
-        // Get the wasm binary data
-        let wasmURL = Bundle.module.url(forResource: "sum", withExtension: "wasm")
-        let wasmData = try! Data(contentsOf: wasmURL!)
-        print("\(wasmData.count)")
-        
-        wasmData.withUnsafeBytes { (wasmPointer: UnsafeRawBufferPointer) in
-            let swiftWasmerResult = call_sum_binary(wasmPointer.assumingMemoryBound(to: UInt8.self))
-            print("SwiftWasmer result: \(swiftWasmerResult)")
-            let endTime = CFAbsoluteTimeGetCurrent()
-            print("SwiftWasmer time: \(endTime - startTime)")
-        }
+        let swiftWasmerResult = call_memory_with_limited_static_tunables()
+        print("SwiftWasmer result: \(swiftWasmerResult)")
+        let endTime = CFAbsoluteTimeGetCurrent()
+        print("SwiftWasmer time: \(endTime - startTime)")
     }
     
-    func swiftCallToRustWasmerBinaryMemoryFill() {
+    func swiftCallToRustWasmerBinaryMemoryDynamic() {
         let startTime = CFAbsoluteTimeGetCurrent()
-        
-        // Get the wasm binary data
-        let wasmURL = Bundle.module.url(forResource: "memory", withExtension: "wasm")
-        let wasmData = try! Data(contentsOf: wasmURL!)
-        print("\(wasmData.count)")
-        
-        wasmData.withUnsafeBytes { (wasmPointer: UnsafeRawBufferPointer) in
-            let swiftWasmerResult = call_memory_fill_binary(wasmPointer.assumingMemoryBound(to: UInt8.self))
-            print("SwiftWasmer result: \(swiftWasmerResult)")
-            let endTime = CFAbsoluteTimeGetCurrent()
-            print("SwiftWasmer time: \(endTime - startTime)")
-        }
-    }
-    
-    func swiftCallToRustWasmerBinaryMemoryTest() {
-        let startTime = CFAbsoluteTimeGetCurrent()
-        let swiftWasmerResult = call_memory_test_wat()
+        let swiftWasmerResult = call_memory_with_dynamic_tunables()
         print("SwiftWasmer result: \(swiftWasmerResult)")
         let endTime = CFAbsoluteTimeGetCurrent()
         print("SwiftWasmer time: \(endTime - startTime)")

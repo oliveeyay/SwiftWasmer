@@ -15,9 +15,9 @@ public struct SwiftWasmerView: View {
     public var body: some View {
         VStack {
             Button(action: {
-                swiftWasmerViewModel.swiftCallToRustWasmerWatSum()
+                swiftWasmerViewModel.swiftCallToRustWasmerBinaryMemoryStaticLimited()
             }) {
-                Text("Launch Wasm Sum Program (wat)")
+                Text("Launch Wasm Memory Program (Static Limited to 512mb)")
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(Color.blue)
@@ -28,9 +28,9 @@ public struct SwiftWasmerView: View {
             .padding()
             
             Button(action: {
-                swiftWasmerViewModel.swiftCallToRustWasmerBinarySum()
+                swiftWasmerViewModel.swiftCallToRustWasmerBinaryMemoryDynamic()
             }) {
-                Text("Launch Wasm Sum Program (binary)")
+                Text("Launch Wasm Memory Program (Dynamic)")
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(Color.blue)
@@ -41,22 +41,9 @@ public struct SwiftWasmerView: View {
             .padding()
             
             Button(action: {
-                swiftWasmerViewModel.swiftCallToRustWasmerBinaryMemoryFill()
+                swiftWasmerViewModel.swiftCallToRustWasmerBinaryMemoryDefault()
             }) {
-                Text("Launch Wasm Memory Program (binary)")
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundStyle(Color.white)
-                    .fontWeight(.bold)
-                    .cornerRadius(40)
-            }
-            .padding()
-            
-            Button(action: {
-                swiftWasmerViewModel.swiftCallToRustWasmerBinaryMemoryTest()
-            }) {
-                Text("Launch Wasm Memory Program (binary)")
+                Text("Launch Wasm Memory Program (Default - Crash)")
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(Color.blue)

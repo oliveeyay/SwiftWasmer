@@ -1,6 +1,19 @@
 # SwiftWasmer
 Demonstrates how to call Wasmer through Rust from a Swift Multiplatform app (iOS, MacOS).
 
+## Making Wasmer work with iOS
+If a wasm program is ran on iOS and uses some memory in some capacity, an error will happen:
+`Failed to create memory: Error when allocating memory: Cannot allocate memory (os error 12)`
+
+Example of issues opened related to this: https://github.com/wasmerio/wasmer/issues/4343
+
+To circumvent this issue, you need to tune the memory (style or size) of the Wasmer VM. Three examples are available in this repository:
+1. A default Store with a default Memory -> [Default Memory](RustWasmer/src/memory_default.rs) (it will crash)
+2. A Static Memory Style (implementing BaseTunables directly) -> [Static Limited Memory](RustWasmer/src/memory_static_limited.rs)
+3. A Dynamic Memory Style (composing Tunables to override and force the MemoryStyle) -> [Default Memory](RustWasmer/src/memory_dynamic.rs)
+
+In my tests, using a limited static memory style was more performant than a dynamic style. It might depend on your program and needs.
+
 # How to build
 
 ## What do you need to build the project
